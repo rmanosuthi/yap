@@ -1,0 +1,5 @@
+{
+	"db_addr": "mysql://root:supersecretpassword@db:3306",
+	"api_addr": "server:8080",
+	"ws_addr": "server:9999"
+}

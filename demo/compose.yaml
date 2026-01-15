@@ -1,0 +1,28 @@
+services:
+  db:
+    image: docker.io/library/mariadb:12.2.1-ubi10-rc
+    expose:
+      - 3306
+    environment:
+      MARIADB_ROOT_PASSWORD: supersecretpassword
+  server:
+    image: localhost/yap_demo/server
+    build:
+      context: ../
+      dockerfile: demo/server.Dockerfile
+    volumes:
+      - ./deploy/:/deploy
+    expose:
+      - 8080
+      - 9999
+    environment:
+      RUST_LOG: debug
+  client:
+    image: localhost/yap_demo/client
+    build:
+      context: ../
+      dockerfile: demo/client.Dockerfile
+    volumes:
+      - ./deploy/:/deploy
+    environment:
+      RUST_LOG: debug
