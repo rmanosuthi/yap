@@ -1,5 +1,7 @@
 # `yap` - proof-of-concept chat program
 
+<img width="1920" height="1200" alt="Demo" src="https://github.com/user-attachments/assets/a6630e14-98da-48f2-b5f4-d563cb94fdca" />
+
 This is an updated MVP of `yap_client` (2021) and `yap_server` (2021) in order for them to build again.
 
 For historical reasons I've preserved the jank, excessive nesting, most compiler warnings, and poor cryptography.
